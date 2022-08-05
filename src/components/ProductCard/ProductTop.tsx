@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Product } from '../../types/product'
 
 import { ProductIconsTop } from './ProductIconsTop';
+import { ProductSlider } from './ProductSlider';
 
 interface ProductTopProps {
   product: Product
@@ -12,13 +13,8 @@ interface ProductTopProps {
 
 const Container = styled.div`
   height: 70%;
-  position: relative;   
-`
-
-const ImageProduct = styled.img`
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+  position: relative;
+  overflow:hidden;
 `
 
 const CardBanner = styled.div`
@@ -37,12 +33,25 @@ const CardBanner = styled.div`
   border-radius: 8px;
 `
 
+const ImageProduct = styled.img`
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+`
+
 export const ProductTop: FC<ProductTopProps> = ({ product, img }) => {
+  const slides = [
+    (<ImageProduct src={img} alt={product.title} />),
+    (<ImageProduct src={img} alt={product.title} />),
+    (<ImageProduct src={img} alt={product.title} />),
+    (<ImageProduct src={img} alt={product.title} />),
+  ]
+
   return (
     <Container>
       {product.seen && <CardBanner>Просмотрено</CardBanner>}
-      <ImageProduct src={img} alt={product.title} />
+      <ProductSlider slides={slides}/>
       <ProductIconsTop />
-    </Container>
+    </Container >
   )
 }
