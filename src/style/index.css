@@ -1,9 +1,0 @@
-#root .swiper-pagination-bullet {
-  border:1px solid #5A5A5A;
-  background: #C4C4C4;
-  opacity: 1;
-}
-
-#root .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: #00A0AB;
-}
