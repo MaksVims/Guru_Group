@@ -73,7 +73,7 @@ export const ProductsPage = () => {
     fetchProducts()
   }, [fetchProducts])
 
-  if(error) {
+  if (error) {
     return <Error>{error}</Error>
   }
 

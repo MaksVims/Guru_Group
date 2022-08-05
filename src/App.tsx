@@ -1,9 +1,10 @@
 import React from 'react';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
 import { DefaultTheme } from 'styled-components';
 
 import { ProductsPage } from './components/ProductsPage';
+
 import { GlobalStyle } from './style/GlobalCSS';
 
 const theme: DefaultTheme = {
@@ -31,6 +32,7 @@ const theme: DefaultTheme = {
     },
   },
 }
+
 
 function App() {
   return (
