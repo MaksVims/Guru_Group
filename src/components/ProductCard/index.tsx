@@ -14,10 +14,14 @@ interface ContainerProductProps {
   seen: boolean
 }
 
-const ContainerProduct = styled.article<ContainerProductProps>`
+const ContainerProduct = styled.a<ContainerProductProps>`
+  cursor:pointer;
   height: 368px;
   border-radius: 8px;
   overflow: hidden;
+  &:hover {
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.6));
+  }
   filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
   background: ${props => props.seen ? props.theme.colors.bg.seen : 'white'};
 `
@@ -29,7 +33,7 @@ export const ProductCard: FC<ProductCardProps> = ({ product }) => {
         product={product}
         img={'https://source.unsplash.com/random'}
       />
-      <ProductContent product={product}/>
+      <ProductContent product={product} />
     </ContainerProduct>
   )
 }
