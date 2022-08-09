@@ -30,7 +30,7 @@
     "lint": "eslint -c .eslintrc --ext .ts,.tsx .",
     "lint-fix": "npm run lint -- --fix",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b main -d build"
+    "deploy": "gh-pages -d build"
   },
   "homepage": "https://VitamiN935.github.io/Guru_Group",
   "browserslist": {
